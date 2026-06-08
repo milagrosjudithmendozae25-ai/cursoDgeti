@@ -10,7 +10,7 @@ def main(page: ft.Page):
     page.window_height = 600
     # Tema institucional DEGETI guinda principal tomando del sitio de referencia)
     page.theme_mode = ftThemeMode.LIGHT
-    page.theme = ft.Theme(color:Scheme:seed="#611232")
+    page.theme = ft.Theme(color_scheme_seed="#611232")
     page.bgcolor ="#F7F4EF"
 
 
