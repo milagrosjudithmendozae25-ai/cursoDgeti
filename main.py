@@ -41,11 +41,11 @@ def main(page: ft.Page):
             page.views.append(
                 ft.View(
                    route="/gestionar_disciplina",
-                   controls=[DisciplinasView(page)]
-                   padding=20,
-                   scroll=ft.ScrollMode.AUTO,
-                )
-            )
+                   controls=[DisciplinasView(page)],
+        padding=20,
+        scroll=ft.ScrollMode.AUTO,
+    )
+)
 
             page.update()
 
@@ -53,12 +53,13 @@ def main(page: ft.Page):
         page.on_route_change = route_change
 
         # Aseguramos la ruta raiz por defecto
-        if not page.route:
+        if page.route == "" or page.route is None or not page.route:
             page.route = "/"
+        
+        # Forzamos la ejecucion manual la primera vez
+        route_change(None)
 
-            #Forzamos la ejecucion  manual la primera vez
-            route_change(None)
-
+# Instancia principal para arrancar el servidor
 if __name__ == "__main__":
     crear_tables()
     ft.app(target=main, view=ft.AppView.WEB_BROWSER)
