@@ -26,10 +26,10 @@ def main(page: ft.Page):
         if ruta == "/":
             page.views.append(
                 ft.View(
-                   route="/",
-                   controls=[PanelAdministradorView(page)]
-                   vertial_alignment=ft.MainAxisAlignment.CENTER
-                   horizontal_alignment=ft.CrossAxisAlignment.CENTER
+                  route="/",
+                  controls=[PanelAdministradorView(page)],
+                  vertical_alignment=ft.MainAxisAlignment.CENTER,
+                  horizontal_alignment=ft.CrossAxisAlignment.CENTER
                 )
             )
 
