@@ -6,7 +6,7 @@ class DisciplinasView(ft.Column):
         super().__init__(expand=True, spacing=15)
     
     # Conectamos esta vista con su cotrolador
-    self.controller = DiscilinaController(self
+    self.controller = DisciplinaController(self
                                           
     # Lista visual donde se mostraran las disciplinas registradas
     self.lista_disciplinas = ft.ListView(
